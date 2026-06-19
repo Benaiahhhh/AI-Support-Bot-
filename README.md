@@ -37,7 +37,7 @@ WooCommerce stores receive hundreds of repetitive order-status queries daily. Tr
 - [Ollama](https://ollama.com/) installed & running (`ollama serve`)
 - Local WordPress + WooCommerce (LocalWP recommended)
 
-### 1. Backend Setup
+### 1. Backend Setup 
 ```bash
 cd backend
 python -m venv venv
@@ -48,5 +48,23 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 python app.py  # Runs on http://localhost:5000
+```
+### 2. WordPress Plugin
+Copy wordpress-plugin/ into wp-content/plugins/
+Activate WP Support Bot Prototype in WP Admin
+Chat bubble appears on frontend → auto-connects to localhost:5000
+📡 API Contract
+Endpoint: POST /chat
+Request:
+{ "message": "Where is order #456?" }
+Response: 
+{
+  "reply": "✅ Order #456 shipped on 2024-06-15. Track via USPS: 9400100000000000000000",
+  "handoff": false
+}
 
-
+Hand off response: 
+{
+  "reply": "I understand this needs personal attention... Reference: #HANDOFF-I_WANT_A_",
+  "handoff": true
+}

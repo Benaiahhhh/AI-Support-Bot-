@@ -7,6 +7,7 @@
 [![LangChain](https://img.shields.io/badge/LangChain-1.0%2B-orange)](https://www.langchain.com/)
 [![Ollama](https://img.shields.io/badge/Ollama-Local-green)](https://ollama.com/)
 
+<<<<<<< HEAD
 ## 🚀 Features
 - ✅ Semantic retrieval via FAISS + local embeddings
 - ✅ Regex order extraction + deterministic WooCommerce lookup
@@ -25,6 +26,19 @@ python -m venv venv
 venv\Scripts\activate  # Windows
 pip install -r requirements.txt
 python app.py  # Runs on http://localhost:5000
+=======
+##  Quick Start
+```Bash
+ollama serve
+cd backend && python -m venv venv && source venv/bin/activate
+pip install -r requirements.txt && python app.py
+\\\
+Drop \wordpress-plugin/\ into \wp-content/plugins/\ and activate.
+```
+## API
+\POST /chat\ → \{"message":"Where is order #456?"}\
+Returns: \{"reply":"...","handoff":false}\
+>>>>>>> f7c5675b7f3097e93b1554e4034879087b1680e6
 
 # 3. Activate WordPress plugin
 Drop wordpress-plugin/ into wp-content/plugins/ and activate in WP Admin

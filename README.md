@@ -9,13 +9,13 @@
 omic-embed-text)
 
 ##  Quick Start
-'''Bash
+```Bash
 ollama serve
 cd backend && python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt && python app.py
 \\\
 Drop \wordpress-plugin/\ into \wp-content/plugins/\ and activate.
-
+```
 ## API
 \POST /chat\ → \{"message":"Where is order #456?"}\
 Returns: \{"reply":"...","handoff":false}\
